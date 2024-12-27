@@ -73,7 +73,10 @@ set /p choice=Bir işlem numarası seçin:
 
 if "%choice%"=="1" (slmgr /xpr && pause)
 if "%choice%"=="2" (slmgr /dlv && pause)
-if "%choice%"=="3" (wmic qfe get HotfixID,InstalledOn || echo Güncelleme bilgisi alınamadı. && pause)
+if "%choice%"=="3" (
+    wmic qfe get HotfixID,InstalledOn || echo Güncelleme bilgisi alınamadı.
+    pause
+)
 if "%choice%"=="4" (start ms-windows-store://update && pause)
 if "%choice%"=="5" goto menu
 goto Lisans_güncelleme
