@@ -42,8 +42,17 @@ echo ============================================
 set /p choice=Bir işlem numarası seçin: 
 
 if "%choice%"=="1" (echo Bilgisayar Adı: %COMPUTERNAME% && echo Aktif Kullanıcı: %USERNAME% && pause)
-if "%choice%"=="2" (wmic bios get serialnumber | find /v "SerialNumber" || echo Seri numarası alınamadı. && pause)
-if "%choice%"=="3" (wmic computersystem get manufacturer,model | find /v "Manufacturer" || echo Bilgi alınamadı. && pause)
+if "%choice%"=="2" (
+wmic bios get serialnumber | findstr /v "SerialNumber"
+    if errorlevel 1 echo Seri numarası alınamadı.
+    pause
+)
+ if "%choice%"=="3" (
+    wmic computersystem get manufacturer,model | findstr /v "Manufacturer"
+    if errorlevel 1 echo Bilgi alınamadı.
+    pause
+)
+
 if "%choice%"=="4" (msinfo32 && pause)
 if "%choice%"=="5" (start winver && pause)
 if "%choice%"=="6" goto menu
