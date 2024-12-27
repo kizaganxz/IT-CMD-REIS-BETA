@@ -11,7 +11,7 @@ echo 2. Lisans ve Güncelleme
 echo 3. Ağ ve Bağlantı
 echo 4. Yazıcı ve Donanım
 echo 5. Bakım ve Onarım
-echo 6. Active Directory Yönetimiif 
+echo 6. Active Directory Yönetimi 
 echo 7. Çıkış Yap
 echo ══════════════════════════════════════════
 set /p choice=Bir İşlem numarası seçin (Çıkmak için X girin):
