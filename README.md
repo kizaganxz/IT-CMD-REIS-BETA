@@ -1,4 +1,4 @@
-# IT CMD REİS_BETA - YAKUP EFE ÖZKAN
+# IT CMD REİS_BETA 
 
 ## Proje Hakkında
 
